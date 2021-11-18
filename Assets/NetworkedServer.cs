@@ -14,6 +14,9 @@ public class NetworkedServer : MonoBehaviour
     int hostID;
     int socketPort = 5491;
     LinkedList<PlayerAccount> playerAccounts;
+    int playerWaitingID = -1;
+    
+    LinkedList<GameRoom> gameRooms;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class NetworkedServer : MonoBehaviour
         playerAccounts = new LinkedList<PlayerAccount>();
         //read in player accounts
         LoadPlayerManagementFile();
+        gameRooms = new LinkedList<GameRoom>();
     }
 
     // Update is called once per frame
@@ -72,8 +76,13 @@ public class NetworkedServer : MonoBehaviour
         Debug.Log("msg recieved = " + msg + ".  connection id = " + id);
         string[] csv = msg.Split(',');
         int signifier = int.Parse(csv[0]);
-        string n = csv[1];
-        string p = csv[2];
+        string n="";
+        string p="";
+        if (csv.Length > 2)
+        {
+            n = csv[1];
+            p = csv[2];
+        }
         bool nameIsInUse = false;
         bool validUser = false;
         if (signifier == ClientToServerSignifiers.CreateAccount)
@@ -125,6 +134,32 @@ public class NetworkedServer : MonoBehaviour
             else
                 SendMessageToClient(ServerToClientSignifiers.LoginFailed + "", id);
         }
+        else if (signifier==ClientToServerSignifiers.JoinGammeRoomQueue)
+        {
+            if (playerWaitingID == -1)
+            {
+                playerWaitingID = id;
+                SendMessageToClient(ServerToClientSignifiers.OpponentPlay + "", id);
+            }
+            else
+            {
+                GameRoom gr = new GameRoom(playerWaitingID, id);
+                gameRooms.AddLast(gr);
+                playerWaitingID = -1;
+                SendMessageToClient(ServerToClientSignifiers.GameStart + "", gr.playerId1);
+                SendMessageToClient(ServerToClientSignifiers.GameStart + "", gr.playerId2);
+            }
+        }
+        else if (signifier==ClientToServerSignifiers.PlayGame)
+        {
+            GameRoom gr = GetGameRoomClientId(id);
+            if(gr!=null)
+            {
+                if (gr.playerId1 == id)
+                    SendMessageToClient(ServerToClientSignifiers.GameStart + ","+ gr.playerId2,id);
+                else SendMessageToClient(ServerToClientSignifiers.GameStart + ","+ gr.playerId1, id);
+            }
+        }
     }
     
     public void SavePlayerManagementFile()
@@ -155,12 +190,24 @@ public class NetworkedServer : MonoBehaviour
             }
         }
     }
-
+    public GameRoom GetGameRoomClientId(int playerId)
+    {
+        foreach (GameRoom gr in gameRooms)
+        {
+            if(gr.playerId1==playerId || gr.playerId2==playerId)
+            {
+                return gr;
+            }
+        }
+        return null;
+    }
 }
 public static class ClientToServerSignifiers
 {
     public const int CreateAccount = 1;
     public const int Login = 2;
+    public const int JoinGammeRoomQueue = 3;
+    public const int PlayGame = 4;
 }
 public static class ServerToClientSignifiers
 {
@@ -168,7 +215,8 @@ public static class ServerToClientSignifiers
     public const int LoginFailed = 2;
     public const int AccountCreationComplete = 3;
     public const int AccountCreationFailed = 4;
-
+    public const int OpponentPlay = 5;
+    public const int GameStart = 6;
 }
 public class PlayerAccount
 {
@@ -180,4 +228,13 @@ public class PlayerAccount
         password = p;
     }
 
+}
+public class GameRoom
+{
+    public int playerId1, playerId2;
+    public GameRoom(int P1,int P2)
+    {
+        playerId1 = P1;
+        playerId2 = P2;
+    }
 }
