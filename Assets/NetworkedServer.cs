@@ -130,7 +130,7 @@ public class NetworkedServer : MonoBehaviour
             }
             //send to client suc or fail
             if(validUser)
-                SendMessageToClient(ServerToClientSignifiers.LoginComplete + "", id);
+                SendMessageToClient(ServerToClientSignifiers.LoginComplete + ","+n, id);
             else
                 SendMessageToClient(ServerToClientSignifiers.LoginFailed + "", id);
         }
@@ -168,6 +168,10 @@ public class NetworkedServer : MonoBehaviour
             {
                 SendMessageToClient(ServerToClientSignifiers.ReceiveMsg+","+csv[1], gr.playerId1);
                 SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + csv[1], gr.playerId2);
+                foreach (int ob in gr.ObserverList)
+                {
+                    SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + csv[1], ob);
+                } 
             }
         }
         else if (signifier == ClientToServerSignifiers.SendPrefixMsg)
@@ -179,6 +183,17 @@ public class NetworkedServer : MonoBehaviour
                 SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + csv[1], gr.playerId1);
                 SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + csv[1], gr.playerId2);
             }
+        }
+        else if(signifier == ClientToServerSignifiers.JoinAsObserver)
+        {
+            Debug.Log("join as observer");
+            foreach (GameRoom gr in gameRooms)
+            {
+                gr.ObserverList.Add(id);
+                SendMessageToClient(ServerToClientSignifiers.someoneJoinedAsObserver + "," + id, gr.playerId1);
+                SendMessageToClient(ServerToClientSignifiers.someoneJoinedAsObserver + "," + id, gr.playerId2);
+            }
+            
         }
 
     }
@@ -231,6 +246,7 @@ public static class ClientToServerSignifiers
     public const int PlayGame = 4;
     public const int SendMsg = 5;
     public const int SendPrefixMsg = 6;
+    public const int JoinAsObserver = 7;
 }
 public static class ServerToClientSignifiers
 {
@@ -241,6 +257,7 @@ public static class ServerToClientSignifiers
     public const int OpponentPlay = 5;
     public const int GameStart = 6;
     public const int ReceiveMsg = 7;
+    public const int someoneJoinedAsObserver = 8;
 }
 public class PlayerAccount
 {
@@ -256,9 +273,11 @@ public class PlayerAccount
 public class GameRoom
 {
     public int playerId1, playerId2;
+    public List<int> ObserverList;
     public GameRoom(int P1,int P2)
     {
         playerId1 = P1;
         playerId2 = P2;
+        ObserverList = new List<int>();
     }
 }
