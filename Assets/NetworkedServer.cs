@@ -139,7 +139,7 @@ public class NetworkedServer : MonoBehaviour
             if (playerWaitingID == -1)
             {
                 playerWaitingID = id;
-                SendMessageToClient(ServerToClientSignifiers.OpponentPlay + "", id);
+               // SendMessageToClient(ServerToClientSignifiers.OpponentPlay + "", id);
             }
             else
             {
@@ -156,10 +156,31 @@ public class NetworkedServer : MonoBehaviour
             if(gr!=null)
             {
                 if (gr.playerId1 == id)
-                    SendMessageToClient(ServerToClientSignifiers.GameStart + ","+ gr.playerId2,id);
-                else SendMessageToClient(ServerToClientSignifiers.GameStart + ","+ gr.playerId1, id);
+                    SendMessageToClient(ServerToClientSignifiers.OpponentPlay + ","+ gr.playerId2,id);
+                else SendMessageToClient(ServerToClientSignifiers.OpponentPlay + ","+ gr.playerId1, id);
             }
         }
+        else if (signifier == ClientToServerSignifiers.SendMsg)
+        {
+            Debug.Log("send from s: " + msg);
+            GameRoom gr = GetGameRoomClientId(id);
+            if (gr != null)
+            {
+                SendMessageToClient(ServerToClientSignifiers.ReceiveMsg+","+csv[1], gr.playerId1);
+                SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + csv[1], gr.playerId2);
+            }
+        }
+        else if (signifier == ClientToServerSignifiers.SendPrefixMsg)
+        {
+            Debug.Log("send pr from s: " + msg);
+            GameRoom gr = GetGameRoomClientId(id);
+            if (gr != null)
+            {
+                SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + csv[1], gr.playerId1);
+                SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + csv[1], gr.playerId2);
+            }
+        }
+
     }
     
     public void SavePlayerManagementFile()
@@ -208,6 +229,8 @@ public static class ClientToServerSignifiers
     public const int Login = 2;
     public const int JoinGammeRoomQueue = 3;
     public const int PlayGame = 4;
+    public const int SendMsg = 5;
+    public const int SendPrefixMsg = 6;
 }
 public static class ServerToClientSignifiers
 {
@@ -217,6 +240,7 @@ public static class ServerToClientSignifiers
     public const int AccountCreationFailed = 4;
     public const int OpponentPlay = 5;
     public const int GameStart = 6;
+    public const int ReceiveMsg = 7;
 }
 public class PlayerAccount
 {
