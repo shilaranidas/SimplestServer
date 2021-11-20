@@ -1,0 +1,255 @@
+Start connection 1
+user1:Login succeed from connection 1
+user1:player join in game room from connection 1
+Start connection 2
+user2:Login succeed from connection 2
+user2:player join in game room from connection 2
+Start connection 3
+user3:Login succeed from connection 3
+user3:player join in game room from connection 3
+start game with players(connection_id:name) ,1:user1,2:user2,3:user3
+Start connection 4
+user4:Account creation succeed from connection 4
+user4:join as observer from connection 4
+user3:hello private to connection 1
+user3:test from connection 3
+user3:hello public from connection 3
+user2:hello pri to connection 3
+user2:bye from connection 2
+user2:hello pub from connection 2
+user1:hello prt to connection 3
+user1:call you later from connection 1
+user1:hell all from connection 1
+user3:call you later from connection 3
+user2:hello from connection 2
+user1:test from connection 1
+user3:test 1 from connection 3
+user2:test 2 from connection 2
+user1:test 3 from connection 1
+Disconnection 3
+Disconnection 2
+Disconnection 4
+Disconnection 1
+Start connection 1
+Start connection 2
+Start connection 3
+user1:Login succeed from connection 3
+user1:player join in game room from connection 3
+user2:Login succeed from connection 1
+user2:player join in game room from connection 1
+user3:Account creation failed from connection 2
+user3:Account creation failed from connection 2
+user3:Account creation failed from connection 2
+user3:Login succeed from connection 2
+user3:player join in game room from connection 2
+start game with players(connection_id:name) ,3:user1,1:user2,2:user3
+user3:hello from connection 2
+user3:ds from connection 2
+Disconnection 2
+Disconnection 3
+Disconnection 1
+Start connection 1
+user1:Login succeed from connection 1
+user1:player join in game room from connection 1
+Start connection 2
+user2:Login succeed from connection 2
+user2:player join in game room from connection 2
+Start connection 3
+user3:Login succeed from connection 3
+Start connection 4
+user4:Login succeed from connection 4
+Start connection 5
+user5:Account creation succeed from connection 5
+user3:player join in game room from connection 3
+start game with players(connection_id:name) ,1:user1,2:user2,3:user3
+Disconnection 5
+Disconnection 4
+Disconnection 3
+Disconnection 2
+Disconnection 1
+20211120 081754: Start connection 1
+20211120 081802: user1:Login succeed from connection 1
+20211120 081804: user1:player join in game room from connection 1
+20211120 081813: Disconnection 1
+20211120 082604: Start connection 1
+20211120 082608: Disconnection 1
+20211120 082636: Start connection 1
+20211120 082647: user1:Login succeed from connection 1
+20211120 082647: user1:player join in game room from connection 1
+20211120 082658: Disconnection 1
+20211120 082814: Start connection 1
+20211120 082823: user1:Login succeed from connection 1
+20211120 082824: user1:player join in game room from connection 1
+20211120 082833: Disconnection 1
+20211120 084825: Start connection 1
+20211120 084835: user1:Login succeed from connection 1
+20211120 084838: user1:player join in game room from connection 1
+20211120 084838: start game with players(connection_id:name) ,1:user1,1:user1,1:user1
+20211120 084906: Disconnection 1
+20211120 085204: Start connection 1
+20211120 085222: user1:Login succeed from connection 1
+20211120 085241: Disconnection 1
+20211120 085418: Start connection 1
+20211120 085429: user1:Login succeed from connection 1
+20211120 085431: user1:player join in game room from connection 1
+20211120 085448: Disconnection 1
+20211120 085510: Start connection 1
+20211120 085519: user1:Login succeed from connection 1
+20211120 085520: user1:player join in game room from connection 1
+20211120 085529: Disconnection 1
+20211120 085543: Start connection 1
+20211120 085551: user1:Login succeed from connection 1
+20211120 085553: user1:player join in game room from connection 1
+20211120 085553: start game with players(connection_id:name) ,1:user1,1:user1,1:user1
+20211120 085603: Disconnection 1
+20211120 091438: Start connection 1
+20211120 091453: user1:Login succeed from connection 1
+20211120 091456: user1:player join in game room from connection 1
+20211120 091458: user1:player join in game room from connection 1
+20211120 091507: Start connection 2
+20211120 091515: user2:Login succeed from connection 2
+20211120 091521: Start connection 3
+20211120 091532: user3:Login succeed from connection 3
+20211120 091543: Start connection 4
+20211120 091552: user4:Login succeed from connection 4
+20211120 091558: user1:player join in game room from connection 1
+20211120 091558: start game with players(connection_id:name) ,1:user1,1:user1,1:user1
+20211120 091601: user2:player join in game room from connection 2
+20211120 091603: user3:player join in game room from connection 3
+20211120 091605: user4:join as observer from connection 4
+20211120 091605: user4:join as observer from connection 4
+20211120 091605: user4:join as observer from connection 4
+20211120 091620: user2:player join in game room from connection 2
+20211120 091620: start game with players(connection_id:name) ,2:user2,3:user3,2:user2
+20211120 091651: Disconnection 4
+20211120 091652: Disconnection 3
+20211120 091653: Disconnection 2
+20211120 091654: Disconnection 1
+20211120 091820: Start connection 1
+20211120 091837: user1:Login succeed from connection 1
+20211120 091837: user1:player join in game room from connection 1
+20211120 091901: Start connection 2
+20211120 091909: user2:Login succeed from connection 2
+20211120 091910: user2:player join in game room from connection 2
+20211120 091918: Start connection 3
+20211120 091932: user3:Login succeed from connection 3
+20211120 091933: user3:player join in game room from connection 3
+20211120 091933: start game with players(connection_id:name) ,1:user1,2:user2,3:user3
+20211120 091950: Start connection 4
+20211120 091959: user4:Login succeed from connection 4
+20211120 092001: user4:join as observer from connection 4
+20211120 092001: user4:join as observer from connection 4
+20211120 092001: user4:join as observer from connection 4
+20211120 092001: user4:join as observer from connection 4
+20211120 092001: user4:join as observer from connection 4
+20211120 092040: Start connection 5
+20211120 092104: user5:Login succeed from connection 5
+20211120 092105: user5:join as observer from connection 5
+20211120 092105: user5:join as observer from connection 5
+20211120 092105: user5:join as observer from connection 5
+20211120 092105: user5:join as observer from connection 5
+20211120 092105: user5:join as observer from connection 5
+20211120 093023: Disconnection 5
+20211120 093024: Disconnection 4
+20211120 093024: Disconnection 3
+20211120 093026: Disconnection 2
+20211120 093027: Disconnection 1
+20211120 102036: Start connection 1
+20211120 102251: Start connection 1
+20211120 102302: user1:Login succeed from connection 1
+20211120 102307: user1:player join in game room from connection 1
+20211120 102312: Start connection 2
+20211120 102320: user2:Login succeed from connection 2
+20211120 102322: user2:player join in game room from connection 2
+20211120 102331: Start connection 3
+20211120 102339: user3:Login succeed from connection 3
+20211120 102341: user3:player join in game room from connection 3
+20211120 102341: start game with players(connection_id:name) ,1:user1,2:user2,3:user3
+20211120 102355: Start connection 4
+20211120 102406: user4:Login succeed from connection 4
+20211120 102407: user4:join as observer from connection 4
+20211120 102420: Start connection 5
+20211120 102430: user5:Login succeed from connection 5
+20211120 102434: user5:join as observer from connection 5
+20211120 102547: user1:hello from connection 1
+20211120 102553: user2:hello from connection 2
+20211120 102558: user3:hello from connection 3
+20211120 102602: user3:call you later from connection 3
+20211120 102605: user2:bye from connection 2
+20211120 102609: user1:call you later from connection 1
+20211120 102657: user2:jhgjh from connection 2
+20211120 102702: user3:jhvgjh from connection 3
+20211120 102708: user1:dfsfd from connection 1
+20211120 102712: user3:bye from connection 3
+20211120 102717: user2:test from connection 2
+20211120 102725: user1:dfsfd from connection 1
+20211120 102844: Disconnection 1
+20211120 102845: Disconnection 2
+20211120 102846: Disconnection 3
+20211120 102848: Disconnection 4
+20211120 104729: Start connection 1
+20211120 104738: user1:Login succeed from connection 1
+20211120 104740: user1:player join in game room from connection 1
+20211120 104748: Start connection 2
+20211120 104756: user2:Login succeed from connection 2
+20211120 104757: user2:player join in game room from connection 2
+20211120 104803: Start connection 3
+20211120 104813: user3:Login succeed from connection 3
+20211120 104815: user3:player join in game room from connection 3
+20211120 104815: start game with players(connection_id:name) ,1:user1,2:user2,3:user3
+20211120 104822: Start connection 4
+20211120 104832: user4:Login succeed from connection 4
+20211120 104834: user4:join as observer from connection 4
+20211120 104841: Start connection 5
+20211120 104856: user5:Login succeed from connection 5
+20211120 104857: user5:join as observer from connection 5
+20211120 104917: user3:msg from u3 to u1 to connection 1
+20211120 104925: user2:msg from u2 to u1 to connection 1
+20211120 104937: user1:msg from u1 to u2 to connection 2
+20211120 104946: user1:msg from u1 to u3 to connection 3
+20211120 104949: user1:hello from connection 1
+20211120 104951: user2:hello from connection 2
+20211120 104953: user3:hello from connection 3
+20211120 104955: user3:sdf from connection 3
+20211120 104958: user2:dfgd from connection 2
+20211120 105000: user1:dfgdg from connection 1
+20211120 114200: Disconnection 5
+20211120 114202: Disconnection 4
+20211120 114202: Disconnection 1
+20211120 114204: Disconnection 2
+20211120 114205: Disconnection 3
+20211120 114217: Start connection 1
+20211120 114233: user1:Login succeed from connection 1
+20211120 114234: user1:player join in game room from connection 1
+20211120 114240: Start connection 2
+20211120 114251: user2:Login succeed from connection 2
+20211120 114252: user2:player join in game room from connection 2
+20211120 114300: Start connection 3
+20211120 114309: user3:Login succeed from connection 3
+20211120 114310: user3:player join in game room from connection 3
+20211120 114310: start game with players(connection_id:name) ,1:user1,2:user2,3:user3
+20211120 114318: Start connection 4
+20211120 114326: user4:Login succeed from connection 4
+20211120 114331: user4:join as observer from connection 4
+20211120 114331: user4:join as observer from connection 4
+20211120 114401: user3:nhgvhg to connection 1
+20211120 114416: user2:hvhjggf to connection 3
+20211120 114426: user3:hello from connection 3
+20211120 114439: user3:sddx from connection 3
+20211120 114451: user1:dgdfgd from connection 1
+20211120 114536: user2:sdlfkjslkfj to connection 1
+20211120 114704: Disconnection 4
+20211120 114707: Disconnection 3
+20211120 114708: Disconnection 2
+20211120 114708: Disconnection 1
+20211120 114847: Start connection 1
+20211120 114849: Start connection 2
+20211120 114850: Start connection 3
+20211120 114859: user1:Login succeed from connection 3
+20211120 114900: user1:player join in game room from connection 3
+20211120 114909: user2:Login succeed from connection 2
+20211120 114910: user2:player join in game room from connection 2
+20211120 114920: user3:Login succeed from connection 1
+20211120 114921: user3:player join in game room from connection 1
+20211120 114921: start game with players(connection_id:name) ,3:user1,2:user2,1:user3
+20211120 114926: user3:test to connection 3

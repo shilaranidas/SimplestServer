@@ -56,6 +56,7 @@ public class NetworkedServer : MonoBehaviour
                 break;
             case NetworkEventType.ConnectEvent:
                 Debug.Log("Connection, " + recConnectionID);
+                AppendLogFile("Start connection " + recConnectionID);
                 break;
             case NetworkEventType.DataEvent:
                 string msg = Encoding.Unicode.GetString(recBuffer, 0, dataSize);
@@ -63,6 +64,7 @@ public class NetworkedServer : MonoBehaviour
                 break;
             case NetworkEventType.DisconnectEvent:
                 Debug.Log("Disconnection, " + recConnectionID);
+                AppendLogFile("Disconnection " + recConnectionID);
                 break;
         }
 
@@ -107,8 +109,9 @@ public class NetworkedServer : MonoBehaviour
                 }
                 if (nameIsInUse)
                 {
+                    AppendLogFile(n+":Account creation failed from connection " + id);
                     SendMessageToClient(ServerToClientSignifiers.AccountCreationFailed + "," + n, id);
-                    //AppendLogFile(ServerToClientSignifiers.AccountCreationFailed + "," + System.DateTime.Now.ToString("HH:mm:ss MM/dd/yyyy"));
+                    // + "," + System.DateTime.Now.ToString("HH:mm:ss MM/dd/yyyy"));
                 }
                 else
                 {
@@ -117,6 +120,7 @@ public class NetworkedServer : MonoBehaviour
                     playerAccounts.AddLast(playerAccount);
                     //send to client suc or fail
                     Debug.Log("create success");
+                    AppendLogFile(n + ":Account creation succeed from connection " + id);
                     SendMessageToClient(ServerToClientSignifiers.AccountCreationComplete + "," + n, id);
                     // save list to hd
                     SavePlayerManagementFile();
@@ -140,9 +144,15 @@ public class NetworkedServer : MonoBehaviour
                 }
                 //send to client suc or fail
                 if (validUser)
+                {
+                    AppendLogFile(n+":Login succeed from connection " + id);
                     SendMessageToClient(ServerToClientSignifiers.LoginComplete + "," + n, id);
+                }
                 else
+                {
+                    AppendLogFile(n+":Login failed from connection " + id);
                     SendMessageToClient(ServerToClientSignifiers.LoginFailed + "," + n, id);
+                }
             }
             else if (signifier == ClientToServerSignifiers.JoinGammeRoomQueue)
             {
@@ -152,10 +162,14 @@ public class NetworkedServer : MonoBehaviour
                     if (csv.Length > 1)
                     {
                         playerWaitingIDN = csv[1];
+                        AppendLogFile(csv[1]+":player join in game room from connection " + id);
                         SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id + "," + csv[1], id);
                     }
                     else
-                        SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id , id);
+                    {
+                        AppendLogFile("player join in game room from connection " + id);
+                        SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id, id);
+                    }
                 }
                 else if (playerWaitingID2 == -1)
                 {
@@ -163,11 +177,13 @@ public class NetworkedServer : MonoBehaviour
                     if (csv.Length > 1)
                     {
                         playerWaitingIDN2 = csv[1];
+                        AppendLogFile(csv[1] + ":player join in game room from connection " + id);
                         SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id + "," + csv[1], id);
                         SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id + "," + csv[1], playerWaitingID);
                     }
                     else
-                    { 
+                    {
+                        AppendLogFile("player join in game room from connection " + id);
                         SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id, id);
                         SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id, playerWaitingID);
                     }
@@ -182,6 +198,8 @@ public class NetworkedServer : MonoBehaviour
                     gameRooms.AddLast(gr);
                     //foreach (PlayerAccount pa in gr.PlayerList)
                     //{
+                    AppendLogFile(csv[1] + ":player join in game room from connection " + id);
+                    AppendLogFile("start game with players(connection_id:name) " + gr.getPlayers());
                     SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id + "," + csv[1], id);
                     SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id + "," + csv[1], playerWaitingID);
                     SendMessageToClient(ServerToClientSignifiers.JoinedPlay + "," + id + "," + csv[1], playerWaitingID2);
@@ -216,6 +234,7 @@ public class NetworkedServer : MonoBehaviour
                     //{
                     //    SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + csv[1], pa.id);
                     //}
+                    AppendLogFile(csv[2]+":"+csv[1]+" from connection "+id);
                     SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + id + "," + csv[1]+","+csv[2], gr.Player1.id);
                     SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + id + "," + csv[1] + "," + csv[2], gr.Player2.id);
                     SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + id + "," + csv[1] + "," + csv[2], gr.Player3.id);
@@ -233,6 +252,7 @@ public class NetworkedServer : MonoBehaviour
                 {
                     //foreach (PlayerAccount pa in gr.PlayerList)
                     //{
+                    AppendLogFile(csv[2] + ":" + csv[1] + " from connection " + id);
                         SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + id + "," + csv[1] + "," + csv[2], gr.Player1.id);
                     SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + id + "," + csv[1] + "," + csv[2], gr.Player2.id);
                     SendMessageToClient(ServerToClientSignifiers.ReceiveMsg + "," + id + "," + csv[1] + "," + csv[2], gr.Player3.id);
@@ -252,19 +272,24 @@ public class NetworkedServer : MonoBehaviour
                 
                     int recId =int.Parse( csv[1].Substring(0, csv[1].IndexOf(':')));
                 Debug.Log("rid " + recId);
-                if(csv.Length>3)
-                    SendMessageToClient(ServerToClientSignifiers.ReceiveCMsg + "," + id + "," + csv[2]+","+csv[3], recId);                    
+                if (csv.Length > 3)
+                {
+                    AppendLogFile(csv[3] + ":" + csv[2] + " to connection " + recId);
+                    SendMessageToClient(ServerToClientSignifiers.ReceiveCMsg + "," + id + "," + csv[2] + "," + csv[3], recId);
+                    SendMessageToClient(ServerToClientSignifiers.ReceiveCMsg + "," + id + "," + csv[2] + "," + csv[3], id);
+                }
 
             }
             else if (signifier == ClientToServerSignifiers.JoinAsObserver)
             {
-                Debug.Log("join as observer");
+                Debug.Log("join as observer"+gameRooms.Count);
                 foreach (GameRoom gr in gameRooms)
                 {
                     gr.addObserver(id, csv[1]);
                     //foreach (PlayerAccount pa in gr.PlayerList)
                     //{
-                        SendMessageToClient(ServerToClientSignifiers.someoneJoinedAsObserver + "," + id+","+ csv[1], gr.Player1.id);
+                    AppendLogFile(csv[1] + ":join as observer from connection "+id);
+                    SendMessageToClient(ServerToClientSignifiers.someoneJoinedAsObserver + "," + id+","+ csv[1], gr.Player1.id);
                     SendMessageToClient(ServerToClientSignifiers.someoneJoinedAsObserver + "," + id + "," + csv[1], gr.Player2.id);
                     SendMessageToClient(ServerToClientSignifiers.someoneJoinedAsObserver + "," + id + "," + csv[1], gr.Player3.id);
                     //}
@@ -272,6 +297,16 @@ public class NetworkedServer : MonoBehaviour
 
                 }
 
+            }
+            else if (signifier==ClientToServerSignifiers.ReplayMsg)
+            {
+                Debug.Log("replay req");
+                string[] contain=ReadLogFile();
+                foreach (var line in contain)
+                {
+                    SendMessageToClient(ServerToClientSignifiers.ReplayMsg + "," + line, id);
+                }
+                
             }
         }
         catch (Exception ex)
@@ -313,25 +348,28 @@ public class NetworkedServer : MonoBehaviour
     {
         StreamWriter sw = new StreamWriter(Application.dataPath + Path.DirectorySeparatorChar + "Log.txt", true);
 
-        sw.WriteLine(line);
+        sw.WriteLine(System.DateTime.Now.ToString("yyyyMMdd HHmmss") +": "+ line);
 
         sw.Close();
     }
 
-    public void LoadLogFile()
+    public string[] ReadLogFile()
     {
+        string[] contain = null;
         if (File.Exists(Application.dataPath + Path.DirectorySeparatorChar + "Log.txt"))
         {
-            StreamReader sr = new StreamReader(Application.dataPath + Path.DirectorySeparatorChar + "Log.txt");
-            string line;
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] csv = line.Split(',');
+            contain = File.ReadAllLines(Application.dataPath + Path.DirectorySeparatorChar + "Log.txt");
+            //StreamReader sr = new StreamReader(Application.dataPath + Path.DirectorySeparatorChar + "Log.txt");
+            //string line;
+            //while ((line = sr.ReadLine()) != null)
+            //{
+            //    string[] csv = line.Split(',');
 
-                int signifier = int.Parse(csv[0]);
+            //    int signifier = int.Parse(csv[0]);
 
-            }
+            //}
         }
+        return contain;
     }
     public GameRoom GetGameRoomClientId(int playerId)
     {
@@ -359,6 +397,7 @@ public static class ClientToServerSignifiers
     public const int SendPrefixMsg = 6;
     public const int JoinAsObserver = 7;
     public const int SendClientMsg = 8;
+    public const int ReplayMsg = 9;
 }
 public static class ServerToClientSignifiers
 {
@@ -373,6 +412,7 @@ public static class ServerToClientSignifiers
     public const int ListOfPlayer = 8;
     public const int JoinedPlay=9;
     public const int ReceiveCMsg = 10;
+    public const int ReplayMsg = 11;
 }
 public class PlayerAccount
 {
@@ -411,7 +451,8 @@ public class GameRoom
     //}
     public void addObserver(int id, string n)
     {
-        ObserverList.Add(new PlayerAccount(id, n, ""));
+        if(!ObserverList.Contains(new PlayerAccount(id, n, "")))
+            ObserverList.Add(new PlayerAccount(id, n, ""));
     }
     public string getPlayers()
     {
