@@ -653,3 +653,403 @@ Disconnection 1
 20211206 115904: Disconnection 3
 20211206 115906: Disconnection 4
 20211206 115906: Disconnection 2
+20211212 215911: Start connection 1
+20211212 215919: user1:Login succeed from connection 1
+20211212 215922: user1:player join in game room for play from connection 1
+20211212 215928: Start connection 2
+20211212 215940: user2:Login succeed from connection 2
+20211212 215942: user2:player join in game room for tick tac toe from connection 2
+20211212 215942: start game with players(connection_id:name) ,1:user1,2:user2
+20211212 215946: user1 Player turn X in 1. Now user1 chance!
+20211212 215948: user2 Player turn O in 5. Now user1 chance!
+20211212 215949: user1 Player turn X in 2. Now user1 chance!
+20211212 215951: user2 Player turn O in 3. Now user1 chance!
+20211212 215953: user1 Player turn X in 4. Now user1 chance!
+20211212 215955: user2 Player turn O in 6. Now user1 chance!
+20211212 215957: user1 Player turn X in 7. Now user1 has won!
+20211212 215959: user2 Player turn O in 8. Now user2 has won!
+20211212 220020: user1 Player turn X in 9. Now user1 has won!
+20211212 220030: Disconnection 1
+20211212 220031: Disconnection 2
+20211212 220327: Start connection 1
+20211212 220340: Start connection 2
+20211212 220348: user1:Login succeed from connection 1
+20211212 220351: user2:Login succeed from connection 2
+20211212 220352: user2:player join in game room for play from connection 2
+20211212 220354: user1:player join in game room for tick tac toe from connection 1
+20211212 220354: start game with players(connection_id:name) ,2:user2,1:user1
+20211212 220356: After user1 Player turn O in 1. Now play has been drawn!
+20211212 220358: After user2 Player turn X in 2. Now play has been drawn!
+20211212 220359: After user1 Player turn O in 3. Now play has been drawn!
+20211212 220400: After user2 Player turn X in 4. Now play has been drawn!
+20211212 220402: After user1 Player turn O in 5. Now play has been drawn!
+20211212 220403: user2 Player turn X in 8. Now user2 has won!
+20211212 220405: user1 Player turn O in 6. Now user1 has won!
+20211212 220407: user2 Player turn X in 9. Now user2 has won!
+20211212 220409: user1 Player turn O in 7. Now user1 has won!
+20211212 220443: Disconnection 1
+20211212 220443: Disconnection 2
+20211212 220558: Start connection 1
+20211212 220603: Start connection 2
+20211212 220614: user2:Login succeed from connection 2
+20211212 220615: user1:Login succeed from connection 1
+20211212 220617: user1:player join in game room for play from connection 1
+20211212 220619: user2:player join in game room for tick tac toe from connection 2
+20211212 220619: start game with players(connection_id:name) ,1:user1,2:user2
+20211212 220621: user1 Player turn X in 1. Now user1 chance!
+20211212 220623: user2 Player turn O in 4. Now user1 chance!
+20211212 220624: user1 Player turn X in 5. Now user1 chance!
+20211212 220626: user2 Player turn O in 9. Now user1 chance!
+20211212 220628: user1 Player turn X in 6. Now user1 chance!
+20211212 220630: user2 Player turn O in 2. Now user1 chance!
+20211212 220634: user1 Player turn X in 7. Now user1 chance!
+20211212 220636: user2 Player turn O in 3. Now user1 chance!
+20211212 220637: After user1 Player turn X in 8. Now play has been drawn!
+20211212 220720: Disconnection 1
+20211212 220722: Disconnection 2
+20211212 220911: Start connection 1
+20211212 220919: user1:Login succeed from connection 1
+20211212 220922: user1:player join in game room for play from connection 1
+20211212 220927: Start connection 2
+20211212 220936: user2:Login succeed from connection 2
+20211212 220938: user2:player join in game room for tick tac toe from connection 2
+20211212 220938: start game with players(connection_id:name) ,1:user1,2:user2
+20211212 220942: user1 Player turn X in 1. Now user1 chance!
+20211212 220944: user2 Player turn O in 5. Now user1 chance!
+20211212 220945: user1 Player turn X in 2. Now user1 chance!
+20211212 220946: user2 Player turn O in 3. Now user1 chance!
+20211212 220948: user1 Player turn X in 7. Now user1 chance!
+20211212 220949: user2 Player turn O in 8. Now user1 chance!
+20211212 220951: user1 Player turn X in 4. Now user1 has won!
+20211212 220953: user2 Player turn O in 6. Now user2 has won!
+20211212 220955: user1 Player turn X in 9. Now user1 has won!
+20211212 221026: Disconnection 1
+20211213 214009: Start connection 1
+20211213 214020: user1:Login succeed from connection 1
+20211213 214023: user1:player join in game room for play from connection 1
+20211213 214029: Start connection 2
+20211213 214037: user2:Login succeed from connection 2
+20211213 214039: user2:player join in game room for tick tac toe from connection 2
+20211213 214039: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 214044: user1 Player turn X in 1. Now user1 chance!
+20211213 214046: user2 Player turn O in 2. Now user1 chance!
+20211213 214048: user1 Player turn X in 4. Now user1 chance!
+20211213 214050: user2 Player turn O in 5. Now user1 chance!
+20211213 214054: user1 Player turn X in 8. Now user1 chance!
+20211213 214058: user2 Player turn O in 7. Now user1 chance!
+20211213 214059: user1 Player turn X in 3. Now user1 chance!
+20211213 214102: user2 Player turn O in 6. Now user1 chance!
+20211213 214105: After user1 Player turn X in 9. Now play has been drawn!
+20211213 214152: Disconnection 1
+20211213 214154: Disconnection 2
+20211213 214500: Start connection 1
+20211213 214507: user1:Login succeed from connection 1
+20211213 214510: user1:player join in game room for play from connection 1
+20211213 214515: Start connection 2
+20211213 214522: user2:Login succeed from connection 2
+20211213 214524: user2:player join in game room for tick tac toe from connection 2
+20211213 214524: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 214528: user1 Player turn X in 1. Now user1 chance!
+20211213 214529: user2 Player turn O in 2. Now user1 chance!
+20211213 214531: user1 Player turn X in 4. Now user1 chance!
+20211213 214535: user2 Player turn O in 7. Now user1 chance!
+20211213 214536: user1 Player turn X in 5. Now user1 chance!
+20211213 214538: user2 Player turn O in 9. Now user1 chance!
+20211213 214541: user1 Player turn X in 3. Now user1 chance!
+20211213 214545: user2 Player turn O in 6. Now user1 chance!
+20211213 214547: After user1 Player turn X in 8. Now play has been drawn!
+20211213 214727: Disconnection 2
+20211213 214727: Disconnection 1
+20211213 214906: Start connection 1
+20211213 214913: Start connection 2
+20211213 214934: user1:Login succeed from connection 1
+20211213 214935: user2:Login succeed from connection 2
+20211213 214936: user2:player join in game room for play from connection 2
+20211213 214938: user1:player join in game room for tick tac toe from connection 1
+20211213 214938: start game with players(connection_id:name) ,2:user2,1:user1
+20211213 214946: user2 Player turn X in 1. Now user2 chance!
+20211213 214947: user1 Player turn O in 2. Now user2 chance!
+20211213 214949: user2 Player turn X in 5. Now user2 chance!
+20211213 214950: user1 Player turn O in 9. Now user2 chance!
+20211213 214952: user2 Player turn X in 3. Now user2 chance!
+20211213 214954: user1 Player turn O in 7. Now user2 chance!
+20211213 214955: user2 Player turn X in 6. Now user2 chance!
+20211213 214956: user1 Player turn O in 4. Now user2 chance!
+20211213 214958: After user2 Player turn X in 8. Now play has been drawn!
+20211213 215027: Disconnection 2
+20211213 215028: Disconnection 1
+20211213 215125: Start connection 1
+20211213 215130: Start connection 2
+20211213 215138: user1:Login succeed from connection 1
+20211213 215140: user1:player join in game room for play from connection 1
+20211213 215148: user2:Login succeed from connection 2
+20211213 215151: user2:player join in game room for tick tac toe from connection 2
+20211213 215151: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 215154: After user1 Player turn X in 1. Now play has been drawn!
+20211213 215218: After user2 Player turn O in 2. Now play has been drawn!
+20211213 215225: user1 Player turn X in 4. Now user1 has won!
+20211213 215234: Disconnection 1
+20211213 215239: Disconnection 2
+20211213 215251: Start connection 1
+20211213 215258: Start connection 2
+20211213 215309: user1:Login succeed from connection 1
+20211213 215311: user1:player join in game room for play from connection 1
+20211213 215318: user2:Login succeed from connection 2
+20211213 215320: user2:player join in game room for tick tac toe from connection 2
+20211213 215320: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 215322: user1 Player turn X in 1. Now user1 chance!
+20211213 215326: user2 Player turn O in 2. Now user1 chance!
+20211213 215327: user1 Player turn X in 4. Now user1 chance!
+20211213 215329: user2 Player turn O in 7. Now user1 chance!
+20211213 215330: user1 Player turn X in 5. Now user1 chance!
+20211213 215331: user2 Player turn O in 9. Now user1 chance!
+20211213 215336: user1 Player turn X in 8. Now user1 chance!
+20211213 215337: user2 Player turn O in 6. Now user1 chance!
+20211213 215339: After user1 Player turn X in 3. Now play has been drawn!
+20211213 215401: Disconnection 1
+20211213 215402: Disconnection 2
+20211213 215707: Start connection 1
+20211213 215714: user1:Login succeed from connection 1
+20211213 215716: user1:player join in game room for play from connection 1
+20211213 215722: Start connection 2
+20211213 215730: user2:Login succeed from connection 2
+20211213 215732: user2:player join in game room for tick tac toe from connection 2
+20211213 215732: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 215735: user1 Player turn X in 1. Now user1 chance!
+20211213 215737: user2 Player turn O in 2. Now user1 chance!
+20211213 215740: user1 Player turn X in 3. Now user1 chance!
+20211213 215742: user2 Player turn O in 4. Now user1 chance!
+20211213 215745: user1 Player turn X in 5. Now user1 chance!
+20211213 215747: user2 Player turn O in 6. Now user1 chance!
+20211213 215749: user1 Player turn X in 7. Now user1 has won!
+20211213 215750: user2 Player turn O in 8. Now user2 has won!
+20211213 215751: user1 Player turn X in 9. Now user1 has won!
+20211213 215821: Disconnection 1
+20211213 215823: Disconnection 2
+20211213 220442: Start connection 1
+20211213 220446: Start connection 2
+20211213 220458: user1:Login succeed from connection 1
+20211213 220500: user1:player join in game room for play from connection 1
+20211213 220502: user2:Login succeed from connection 2
+20211213 220504: user2:player join in game room for tick tac toe from connection 2
+20211213 220504: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 220506: user1 Player turn X in 1. Now user1 chance!
+20211213 220509: user2 Player turn O in 2. Now user1 chance!
+20211213 220510: user1 Player turn X in 5. Now user1 chance!
+20211213 220512: user2 Player turn O in 9. Now user1 chance!
+20211213 220516: user1 Player turn X in 3. Now user1 chance!
+20211213 220518: user2 Player turn O in 7. Now user1 chance!
+20211213 220522: user1 Player turn X in 8. Now user1 chance!
+20211213 220526: user2 Player turn O in 6. Now user1 chance!
+20211213 220527: After user1 Player turn X in 4. Now play has been drawn!
+20211213 220554: Disconnection 1
+20211213 221301: Start connection 1
+20211213 221304: Start connection 2
+20211213 221311: user1:Login succeed from connection 1
+20211213 221313: user1:player join in game room for play from connection 1
+20211213 221319: user2:Login succeed from connection 2
+20211213 221321: user2:player join in game room for tick tac toe from connection 2
+20211213 221321: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 221323: user1 Player turn X in 1. Now user1 chance!
+20211213 221324: user2 Player turn O in 2. Now user1 chance!
+20211213 221325: user1 Player turn X in 5. Now user1 chance!
+20211213 221326: user2 Player turn O in 9. Now user1 chance!
+20211213 221333: user1 Player turn X in 4. Now user1 chance!
+20211213 221334: user2 Player turn O in 7. Now user1 chance!
+20211213 221337: user1 Player turn X in 8. Now user1 chance!
+20211213 221340: user2 Player turn O in 6. Now user1 chance!
+20211213 221343: After user1 Player turn X in 3. Now play has been drawn!
+20211213 221355: Disconnection 1
+20211213 221531: Start connection 1
+20211213 221534: Start connection 2
+20211213 221540: user1:Login succeed from connection 1
+20211213 221541: user1:player join in game room for play from connection 1
+20211213 221549: user2:Login succeed from connection 2
+20211213 221550: user2:player join in game room for tick tac toe from connection 2
+20211213 221550: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 221552: user1 Player turn X in 1. Now user1 chance!
+20211213 221553: user2 Player turn O in 2. Now user1 chance!
+20211213 221554: user1 Player turn X in 5. Now user1 chance!
+20211213 221555: user2 Player turn O in 9. Now user1 chance!
+20211213 221558: user1 Player turn X in 8. Now user1 chance!
+20211213 221559: user2 Player turn O in 6. Now user1 chance!
+20211213 221600: user1 Player turn X in 3. Now user1 chance!
+20211213 221602: user2 Player turn O in 4. Now user1 chance!
+20211213 221604: user1 Player turn X in 7. Now user1 has won!
+20211213 221626: Disconnection 1
+20211213 221627: Disconnection 2
+20211213 222209: Start connection 1
+20211213 222216: Start connection 2
+20211213 222223: user1:Login succeed from connection 1
+20211213 222225: user1:player join in game room for play from connection 1
+20211213 222233: user2:Login succeed from connection 2
+20211213 222234: user2:player join in game room for tick tac toe from connection 2
+20211213 222234: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 222236: user1 Player turn X in 1. Now user1 chance!
+20211213 222238: user2 Player turn O in 2. Now user1 chance!
+20211213 222241: user1 Player turn X in 5. Now user1 chance!
+20211213 222243: user2 Player turn O in 9. Now user1 chance!
+20211213 222250: user1 Player turn X in 3. Now user1 chance!
+20211213 222252: user2 Player turn O in 7. Now user1 chance!
+20211213 222255: user1 Player turn X in 4. Now user1 chance!
+20211213 222257: user2 Player turn O in 6. Now user1 chance!
+20211213 222300: After user1 Player turn X in 8. Now play has been drawn!
+20211213 222312: Disconnection 1
+20211213 223041: Start connection 1
+20211213 223049: user1:Login succeed from connection 1
+20211213 223051: user1:player join in game room for play from connection 1
+20211213 223056: Start connection 2
+20211213 223103: user2:Login succeed from connection 2
+20211213 223105: user2:player join in game room for tick tac toe from connection 2
+20211213 223105: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 223109: user1 Player turn X in 1. Now user1 chance!
+20211213 223111: user2 Player turn O in 2. Now user1 chance!
+20211213 223114: user1 Player turn X in 3. Now user1 chance!
+20211213 223116: user2 Player turn O in 4. Now user1 chance!
+20211213 223118: user1 Player turn X in 5. Now user1 chance!
+20211213 223120: user2 Player turn O in 6. Now user1 chance!
+20211213 223123: user1 Player turn X in 7. Now user1 has won!
+20211213 223128: user2 Player turn O in 8. Now user2 has won!
+20211213 223130: user1 Player turn X in 9. Now user1 has won!
+20211213 223143: Disconnection 1
+20211213 223145: Disconnection 2
+20211213 223756: Start connection 1
+20211213 223801: Start connection 2
+20211213 223808: user1:Login succeed from connection 1
+20211213 223810: user1:player join in game room for play from connection 1
+20211213 223817: user2:Login succeed from connection 2
+20211213 223819: user2:player join in game room for tick tac toe from connection 2
+20211213 223819: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 223821: user1 Player turn X in 1. Now user1 chance!
+20211213 223823: user2 Player turn O in 2. Now user1 chance!
+20211213 223825: user1 Player turn X in 5. Now user1 chance!
+20211213 223826: user2 Player turn O in 9. Now user1 chance!
+20211213 223831: user1 Player turn X in 6. Now user1 chance!
+20211213 223833: user2 Player turn O in 3. Now user1 chance!
+20211213 223836: user1 Player turn X in 4. Now user1 has won!
+20211213 223839: user2 Player turn O in 8. Now user2 has won!
+20211213 223841: user1 Player turn X in 7. Now user1 has won!
+20211213 223940: Disconnection 1
+20211213 223942: Disconnection 2
+20211213 224728: Start connection 1
+20211213 224737: user1:Login succeed from connection 1
+20211213 224738: user1:player join in game room for play from connection 1
+20211213 224743: Start connection 2
+20211213 224752: user2:Login succeed from connection 2
+20211213 224753: user2:player join in game room for tick tac toe from connection 2
+20211213 224753: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 224755: user1 Player turn X in 1. Now user1 chance!
+20211213 224756: user2 Player turn O in 2. Now user1 chance!
+20211213 224757: user1 Player turn X in 5. Now user1 chance!
+20211213 224759: user2 Player turn O in 9. Now user1 chance!
+20211213 224802: user1 Player turn X in 6. Now user1 chance!
+20211213 224803: user2 Player turn O in 4. Now user1 chance!
+20211213 224809: user1 Player turn X in 7. Now user1 chance!
+20211213 224812: user2 Player turn O in 3. Now user1 chance!
+20211213 224814: After user1 Player turn X in 8. Now play has been drawn!
+20211213 225003: Disconnection 1
+20211213 225005: Disconnection 2
+20211213 225043: Start connection 1
+20211213 225048: Start connection 2
+20211213 225220: user1:Login succeed from connection 1
+20211213 225222: user1:player join in game room for play from connection 1
+20211213 225234: user2:Login succeed from connection 2
+20211213 225236: user2:player join in game room for tick tac toe from connection 2
+20211213 225236: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 225336: user2 Player turn O in 1. Now user1 chance!
+20211213 225338: user1 Player turn X in 2. Now user1 chance!
+20211213 225340: user2 Player turn O in 5. Now user1 chance!
+20211213 225342: user1 Player turn X in 6. Now user1 chance!
+20211213 225346: Disconnection 1
+20211213 225349: Disconnection 2
+20211213 225427: Start connection 1
+20211213 225434: Start connection 2
+20211213 230211: Disconnection 1
+20211213 230227: Start connection 1
+20211213 230230: Start connection 2
+20211213 230304: user1:Login succeed from connection 1
+20211213 230306: user1:player join in game room for play from connection 1
+20211213 230313: user2:Login succeed from connection 2
+20211213 230315: user2:player join in game room for tick tac toe from connection 2
+20211213 230315: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 230318: user1 Player turn X in 1. Now user1 chance!
+20211213 230320: user2 Player turn O in 2. Now user1 chance!
+20211213 230321: user1 Player turn X in 5. Now user1 chance!
+20211213 230323: user2 Player turn O in 9. Now user1 chance!
+20211213 230325: user1 Player turn X in 8. Now user1 chance!
+20211213 230327: user2 Player turn O in 6. Now user1 chance!
+20211213 230328: user1 Player turn X in 3. Now user1 chance!
+20211213 230336: user2 Player turn O in 7. Now user1 chance!
+20211213 230339: After user1 Player turn X in 4. Now play has been drawn!
+20211213 230430: Disconnection 1
+20211213 230434: Disconnection 2
+20211213 231310: Start connection 1
+20211213 231321: user1:Login succeed from connection 1
+20211213 231322: user1:player join in game room for play from connection 1
+20211213 231327: Start connection 2
+20211213 231335: user2:Login succeed from connection 2
+20211213 231337: user2:player join in game room for tick tac toe from connection 2
+20211213 231337: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 231400: user1 Player turn X in 1. Now user1 chance!
+20211213 231402: user2 Player turn O in 2. Now user1 chance!
+20211213 231404: user1 Player turn X in 5. Now user1 chance!
+20211213 231405: user2 Player turn O in 9. Now user1 chance!
+20211213 231410: user1 Player turn X in 3. Now user1 chance!
+20211213 231412: user2 Player turn O in 7. Now user1 chance!
+20211213 231415: user1 Player turn X in 4. Now user1 chance!
+20211213 231416: user2 Player turn O in 6. Now user1 chance!
+20211213 231419: After user1 Player turn X in 8. Now play has been drawn!
+20211213 231607: Disconnection 1
+20211213 231607: Disconnection 2
+20211213 231752: Start connection 1
+20211213 231755: Start connection 2
+20211213 231803: user1:Login succeed from connection 1
+20211213 231807: user1:player join in game room for play from connection 1
+20211213 231815: user2:Login succeed from connection 2
+20211213 231818: user2:player join in game room for tick tac toe from connection 2
+20211213 231818: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 231826: user1 Player turn X in 1. Now user1 chance!
+20211213 231831: user2 Player turn O in 2. Now user1 chance!
+20211213 231842: user1 Player turn X in 3. Now user1 chance!
+20211213 231846: user2 Player turn O in 4. Now user1 chance!
+20211213 231851: user1 Player turn X in 5. Now user1 chance!
+20211213 231854: user2 Player turn O in 6. Now user1 chance!
+20211213 231900: user1 Player turn X in 9. Now user1 has won!
+20211213 231904: user2 Player turn O in 8. Now user2 has won!
+20211213 231906: user1 Player turn X in 7. Now user1 has won!
+20211213 232533: Start connection 1
+20211213 232540: user1:Login succeed from connection 1
+20211213 232544: user1:player join in game room for play from connection 1
+20211213 232549: Start connection 2
+20211213 232557: user2:Login succeed from connection 2
+20211213 232558: user2:player join in game room for tick tac toe from connection 2
+20211213 232558: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 232600: user1 Player turn X in 1. Now user1 chance!
+20211213 232601: user2 Player turn O in 5. Now user1 chance!
+20211213 232603: user1 Player turn X in 2. Now user1 chance!
+20211213 232605: user2 Player turn O in 3. Now user1 chance!
+20211213 232607: user1 Player turn X in 4. Now user1 chance!
+20211213 232614: user2 Player turn O in 6. Now user1 chance!
+20211213 232617: user1 Player turn X in 8. Now user1 chance!
+20211213 232618: user2 Player turn O in 7. Now user2 has won!
+20211213 232621: user1 Player turn X in 9. Now user1 has won!
+20211213 232738: Disconnection 1
+20211213 232739: Disconnection 2
+20211213 232803: Start connection 1
+20211213 232812: user1:Login succeed from connection 1
+20211213 232813: user1:player join in game room for play from connection 1
+20211213 232822: Start connection 2
+20211213 232831: user2:Login succeed from connection 2
+20211213 232832: user2:player join in game room for tick tac toe from connection 2
+20211213 232832: start game with players(connection_id:name) ,1:user1,2:user2
+20211213 232837: user1 Player turn X in 1. Now user1 chance!
+20211213 232839: user2 Player turn O in 2. Now user1 chance!
+20211213 232841: user1 Player turn X in 5. Now user1 chance!
+20211213 232843: user2 Player turn O in 9. Now user1 chance!
+20211213 232847: user1 Player turn X in 4. Now user1 chance!
+20211213 232851: user2 Player turn O in 7. Now user1 chance!
+20211213 232857: user1 Player turn X in 8. Now user1 chance!
+20211213 232859: user2 Player turn O in 6. Now user1 chance!
+20211213 232901: After user1 Player turn X in 3. Now play has been drawn!
+20211213 233005: Disconnection 1
+20211213 233006: Disconnection 2

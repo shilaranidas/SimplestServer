@@ -36,6 +36,8 @@ public class NetworkedServer : MonoBehaviour
     //making array and   
     //by default I am providing 0-9 where no use of zero  
     static char[] arr = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+    static int[] turn =new int[9];
+    static int turnGone = 0;
     // The flag veriable checks who has won if it's value is 1 then some one has won the match if -1 then Match has Draw if 0 then match is still running  
     static int flag = 0;
     static int choice; //This holds the choice at which position user want to mark   
@@ -285,7 +287,8 @@ public class NetworkedServer : MonoBehaviour
             else if (signifier == ClientToServerSignifiers.PlayGame)
             {
                 Debug.Log("play game siginifier detected");
-                GameRoom gr = GetGameRoomClientId(id);
+                
+                 GameRoom gr = GetGameRoomClientId(id);
                 if (gr != null)
                 {                                        
                         if (csv.Length > 3)
@@ -309,6 +312,10 @@ public class NetworkedServer : MonoBehaviour
                     {
                         AppendLogFile(csv[1] + " Player turn " + csv[2] + " in " + csv[3] + ". Now " + gr.Player1.name + " chance!");
                         Debug.Log("play " + flag); 
+                    }
+                    if (turnGone <9)
+                    {
+                        turn[turnGone] = int.Parse(csv[3]); turnGone++;
                     }
                     if (gr.Player1.id == id)
                     {
@@ -414,11 +421,42 @@ public class NetworkedServer : MonoBehaviour
                     SendMessageToClient(ServerToClientSignifiers.ReplayMsg + "," + line, id);//msg format: signifier, msg
                 }                
             }
+            else if (signifier == ClientToServerSignifiers.ReplayPlay)//sig,0,x
+            {
+                Debug.Log("replay play signifier detected. ");
+                Debug.Log(String.Join("-", turn));
+                if(int.Parse(csv[1])<9)
+                StartCoroutine(DelayCoroutine(ServerToClientSignifiers.ReplayPlay + "," + turn[int.Parse(csv[1])] + ","+csv[2]+","+ csv[1], id));//sig,cell,val,pos
+                //StartCoroutine(DelayCoroutine(ServerToClientSignifiers.ReplayPlay + "," + turn[1] + ",O", id));
+                //StartCoroutine(DelayCoroutine(ServerToClientSignifiers.ReplayPlay + "," + turn[2] + ",X", id));
+                //StartCoroutine(DelayCoroutine(ServerToClientSignifiers.ReplayPlay + "," + turn[3] + ",O", id));
+                //StartCoroutine(DelayCoroutine(ServerToClientSignifiers.ReplayPlay + "," + turn[4] + ",X", id));
+                //StartCoroutine(DelayCoroutine(ServerToClientSignifiers.ReplayPlay + "," + turn[5] + ",O", id));
+                //StartCoroutine(DelayCoroutine(ServerToClientSignifiers.ReplayPlay + "," + turn[6] + ",X", id));
+                //StartCoroutine(DelayCoroutine(ServerToClientSignifiers.ReplayPlay + "," + turn[7] + ",O", id));
+                //StartCoroutine(DelayCoroutine(ServerToClientSignifiers.ReplayPlay + "," + turn[8] + ",X", id));
+                //SendMessageToClient(ServerToClientSignifiers.ReplayPlay + "," + turn[0]+",X", id);//msg format: signifier, turn  ,value             
+                //SendMessageToClient(ServerToClientSignifiers.ReplayPlay + "," + turn[1] + ",O", id);
+                //SendMessageToClient(ServerToClientSignifiers.ReplayPlay + "," + turn[2] + ",X", id);
+                //SendMessageToClient(ServerToClientSignifiers.ReplayPlay + "," + turn[3] + ",O", id);
+                //SendMessageToClient(ServerToClientSignifiers.ReplayPlay + "," + turn[4] + ",X", id);
+                //SendMessageToClient(ServerToClientSignifiers.ReplayPlay + "," + turn[5] + ",O", id);
+                //SendMessageToClient(ServerToClientSignifiers.ReplayPlay + "," + turn[6] + ",X", id);
+                //SendMessageToClient(ServerToClientSignifiers.ReplayPlay + "," + turn[7] + ",O", id);
+                //SendMessageToClient(ServerToClientSignifiers.ReplayPlay + "," + turn[8] + ",X", id);
+            }
         }
         catch (Exception ex)
         {
             Debug.Log("error" + ex.Message);
         }
+
+    }
+    IEnumerator DelayCoroutine(string b,int d)
+    {
+        yield return new WaitForSeconds(5);
+        Debug.Log(b);
+        SendMessageToClient(b, d);
 
     }
     //Checking that any player has won or not  
@@ -540,6 +578,7 @@ public static class ClientToServerSignifiers
     public const int ReplayMsg = 9;
     public const int JoinDGameRoomQueue = 10;
     public const int JoinDAsObserver = 11;
+    public const int ReplayPlay = 12;
 }
 public static class ServerToClientSignifiers
 {
@@ -558,6 +597,7 @@ public static class ServerToClientSignifiers
     public const int DGameStart = 12;
     public const int SelfPlay = 13;
     public const int OtherPlay = 14;
+    public const int ReplayPlay = 15;
 }
 public class PlayerAccount
 {
